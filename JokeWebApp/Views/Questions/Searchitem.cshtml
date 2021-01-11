@@ -1,0 +1,37 @@
+﻿@model IEnumerable<JokeWebApp.Models.Questions>
+
+@{
+    ViewData["Title"] = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Search Questions</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="questions" asp-action="searchresults">
+            <p>
+               <input type="text" name="searchphrase">
+                <input type="submit" value="search" />
+            </p>
+        </form>   
+        
+    @*<form asp-controller="Questions" asp-action="SearchResults">
+
+            <div class="form-group">
+                <label for="SearchPhrase" class="control-label"></label>
+                <input for="SearchPhrase" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>*@
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+
